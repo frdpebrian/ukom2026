@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portofolio Ferdy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<section class="login-wrap" id="loginWrap">
+  <div class="login-card">
+    <h1>WELCOME</h1>
+    <p>Silakan login untuk masuk</p>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="btn btn-login" onclick="login()">LOGIN</button>
+    <small id="error"></small>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<main id="portfolio" class="hidden">
+
+  <nav class="nav">
+
+  <!-- MENU TITIK 3 -->
+  <div class="menu-wrapper">
+    <button class="btn btn-dots" onclick="toggleMenu()">⋮</button>
+
+    <div class="dropdown" id="dropdownMenu">
+  <a href="#biodata">Biodata</a>
+  <a href="#school">Asal Sekolah</a>
+  <a href="#project">Project</a>
+  <a href="#contact">Hubungi Saya</a>
+  <a href="#" onclick="logout()">Logout</a>
+</div>
+  </div>
+
+  <h2>BIODATA FERDY</h2>
+  <button class="btn btn-theme" onclick="toggleTheme()">🌓</button>
+
+</nav>
+
+  <section class="hero">
+    <h1>Halo, Saya <span>Ferdy Pebrian</span></h1>
+    <p>Siswa SMK Persada Husada Indonesia</p>
+    <button class="btn btn-primary" onclick="scrollToBiodata()">Lihat Biodata</button>
+  </section>
+
+  <!-- BIODATA -->
+  <section id="biodata" class="card biodata">
+    <img src="ferdi.png" class="foto-biodata" alt="Foto Ferdy">
+    <h2>Ferdy Pebrian</h2>
+    <p class="kelas">Kelas XII - TJKT</p>
+    <p class="desc">
+      Saya adalah Siswa SMK Persada Husada Indonesia dengan jurusan Teknik Jaringan Komputer & Telekomunikasi yang senang mempelajari hal - hal baru.
+    </p>
+  </section>
+<section id="school" class="card info-card">
+  <h2>Asal Sekolah</h2>
+  <p><strong>SMK Contoh Negeri</strong></p>
+  <p>Jurusan Rekayasa Perangkat Lunak (RPL)</p>
+  <p>Kota / Kabupaten Anda</p>
+</section>
+  <!-- SKILLS -->
+  <section class="skills">
+    <h2>KEMAMPUAN SAYA</h2>
+
+    <div class="skill">
+      <span>TAMPAN</span>
+      <div class="bar html"><div data-skill="90"></div></div>
+    </div>
+
+    <div class="skill">
+      <span>PINTAR</span>
+      <div class="bar css"><div data-skill="95"></div></div>
+    </div>
+
+    <div class="skill">
+      <span>KEREN</span>
+      <div class="bar js"><div data-skill="90"></div></div>
+    </div>
+  </section>
+<section id="project" class="card project-card">
+  <h2>Project</h2>
+
+  <div class="project-item">
+    <h3>Website Portofolio</h3>
+    <p>Website pribadi menggunakan HTML, CSS, dan JavaScript.</p>
+  </div>
+
+  <div class="project-item">
+    <h3>Login Page</h3>
+    <p>Halaman login dengan validasi username dan password.</p>
+  </div>
+
+  <div class="project-item">
+    <h3>Skill Bar Animation</h3>
+    <p>Animasi progress bar untuk menampilkan kemampuan.</p>
+  </div>
+</section>
+ <footer>
+
+  <!-- SOCIAL MEDIA -->
+  <div class="social-media">
+    <a href="https://instagram.com/USERNAMEKAMU" target="_blank" class="btn btn-ig">
+      📸 Instagram
+    </a>
+
+    <a href="https://tiktok.com/@USERNAMEKAMU" target="_blank" class="btn btn-tt">
+      🎵 TikTok
+    </a>
+  </div>
+
+  <p>© 2026 Ferdy Pebrian</p>
+
+  <!-- HUBUNGI SAYA (PALING BAWAH) -->
+  <div class="footer-contact">
+    <h3>Hubungi Saya</h3>
+
+    <form onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Nama Lengkap" required>
+      <input type="email" placeholder="Email Aktif" required>
+      <textarea rows="4" placeholder="Pesan" required></textarea>
+
+      <button type="submit" class="btn btn-contact-form">
+        Kirim Pesan
+      </button>
+    </form>
+  </div>
+
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
